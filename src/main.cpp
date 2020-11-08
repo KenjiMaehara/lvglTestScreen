@@ -110,7 +110,7 @@ void lv_ex_btn_t(void)
 
     label = lv_label_create(btn1, NULL);
     //lv_label_set_text(label, "Button");
-    lv_label_set_text(label, "テスト10");
+    lv_label_set_text(label, "次のページへ");
 
     lv_obj_t * btn2 = lv_btn_create(lv_scr_act(), NULL);
     lv_obj_set_event_cb(btn2, event_handler);
@@ -136,6 +136,45 @@ void lv_ex_btn_t(void)
     //lv_label_set_text(label, "Toggled");
     lv_label_set_text(label, "テスト30");
 }
+
+
+void lv_ex_btn_t02(void)
+{
+    lv_obj_t * label;
+
+    lv_obj_t * btn1 = lv_btn_create(lv_scr_act(), NULL);
+    lv_obj_set_event_cb(btn1, event_handler);
+    lv_obj_align(btn1, NULL, LV_ALIGN_CENTER, 0, -40);
+
+    label = lv_label_create(btn1, NULL);
+    //lv_label_set_text(label, "Button");
+    lv_label_set_text(label, "前のページへ");
+
+    lv_obj_t * btn2 = lv_btn_create(lv_scr_act(), NULL);
+    lv_obj_set_event_cb(btn2, event_handler);
+    lv_obj_align(btn2, NULL, LV_ALIGN_CENTER, 0, 40);
+    lv_btn_set_checkable(btn2, true);
+    lv_btn_toggle(btn2);
+    lv_btn_set_fit2(btn2, LV_FIT_NONE, LV_FIT_TIGHT);
+
+    label = lv_label_create(btn2, NULL);
+    //lv_label_set_text(label, "Toggled");
+    lv_label_set_text(label, "テスト20");
+
+    
+    
+    lv_obj_t * btn3 = lv_btn_create(lv_scr_act(), NULL);
+    lv_obj_set_event_cb(btn3, event_handler);
+    lv_obj_align(btn3, NULL, LV_ALIGN_CENTER, 0, 120);
+    lv_btn_set_checkable(btn3, true);
+    lv_btn_toggle(btn3);
+    lv_btn_set_fit2(btn3, LV_FIT_NONE, LV_FIT_TIGHT);
+
+    label = lv_label_create(btn3, NULL);
+    //lv_label_set_text(label, "Toggled");
+    lv_label_set_text(label, "テスト30");
+}
+
 
 int test=0;
 
