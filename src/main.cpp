@@ -137,6 +137,8 @@ void lv_ex_btn_t(void)
     lv_label_set_text(label, "テスト30");
 }
 
+int test=0;
+
 void setup() {
 
 
